@@ -58,11 +58,9 @@ class Game:
         else:
             self.wrong.add(guess)
             self.counter += 1
-        incorrect = 'incorrect: '
+        print('Incorrect: '),
         for letter in self.wrong:
-            incorrect += letter + ', '
-        incorrect += '\b\b'
-        print(incorrect)
+            print(f"{letter} ", end=" ")
 
     def print_board(self):
         self.print_stage()
